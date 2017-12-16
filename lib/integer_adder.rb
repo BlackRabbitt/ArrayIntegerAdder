@@ -23,7 +23,7 @@ module IntegerAdder
     carry=0
 
     if result > 9
-      results << result - 10
+      results << result % 10
       carry = 1
     else
       results << result
