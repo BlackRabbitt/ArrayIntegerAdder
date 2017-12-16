@@ -10,20 +10,17 @@ module IntegerAdder
 
   def helper(a, b, i, j, carry, results)
     if i < 0 and j < 0
+      if carry > 0
+        results << carry
+      end
       return
     elsif i < 0
-      for k in b[j].downto(0)
-        results << b[k]
-      end
-      return
+      result = b[j] + carry
     elsif j < 0
-      for k in a[i].downto(0)
-        results << a[k]
-      end
-      return
+      result = a[i] + carry
+    else
+      result = a[i] + b[j] + carry
     end
-
-    result = a[i] + b[j] + carry
     carry=0
 
     if result > 9
