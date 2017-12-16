@@ -1,4 +1,3 @@
-require 'pry'
 module IntegerAdder
   def add(a, b)
     results = []
