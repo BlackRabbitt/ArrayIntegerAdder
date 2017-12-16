@@ -13,4 +13,27 @@ class IntegerAdderTest < MiniTest::Test
 
     assert_equal exp, result
   end
+
+  def test_more_results
+    a1 = [1, 9]
+    b1 = [3]
+    exp1 = [2, 2]
+
+    result = add(a1, b1)
+    assert_equal exp1, result
+
+    a2 = [9]
+    b2 = [5]
+    exp2 = [1, 4]
+
+    result = add(a2, b2)
+    assert_equal(exp2, result)
+
+    a3 = [3]
+    b3 = [1, 9]
+    exp3 = [2, 2]
+
+    result = add(a3, b3)
+    assert_equal exp3, result
+  end
 end
