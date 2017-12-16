@@ -36,4 +36,22 @@ class IntegerAdderTest < MiniTest::Test
     result = add(a3, b3)
     assert_equal exp3, result
   end
+
+  def test_end_cases
+    a1=[]
+    b1=[]
+    result = add(a1, b1)
+    assert_equal([], result)
+
+    a2 = [1, 4]
+    b2 = []
+    result = add(a2, b2)
+    assert_equal([1, 4], result)
+
+    a3 = [9, 9, 9]
+    b3 = [9, 9, 9, 9]
+    exp3 = [1, 0, 9, 9, 8]
+    result = add(a3, b3)
+    assert_equal(exp3, result)
+  end
 end
